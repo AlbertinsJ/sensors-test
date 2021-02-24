@@ -1,0 +1,70 @@
+Noformēt mērījumu datus web lapā tabulas veidā.
+Prasības :
+    Nepieciešamās kolonnas tabulā : 
+        Sensora nosaukums no sensors.json
+        Metriku vērtību kolonnas. Kolonnas nosaukums metrikas nosaukums + aktīvās mērvienības nosaukums no metrics.json un vērtība ir mērījuma vērtība no sensors.json
+    Jābūt iespējai ierakstus sakārto augošā vai dilstošā secībā, pēc jebkuras kolonnas
+    Jābūt meklēšanas ievadlaukam, lai meklētu ierakstus tabulā pēc sensora nosaukuma
+    Jābūt iespējai filtrēt tabulas ierakstus pēc sensora tipa nosaukuma
+    Jābūt iespējai ieslēgt/izslēgt konkrētu metriku vērtību kolonnu rādīšanu
+    Sensoram var nebūt aizpildīts nosaukums, var trūkt sensora tipa informācija sensortTypes.json failā utml. Tiks vērtēta šādu gadījumu apstrāde programmas kodā
+Noformējums
+    Source kodu publicēt Github  (https://github.com/github)
+    Readme failā pievienot Build/Run instrukcijas sekmīgai koda palaišanai
+    Nosūtīt SAF Tehnika (Ivita.Rozite@saftehnika.com) saiti uz repozitoriju
+Izejas dati
+    Faili “sensorTypes.json”, “metrics.json”, “sensors.json”
+
+    Sensoru mērijumu dati sensors.json
+"1048609": { // sensora ID
+    "metrics": { // sensora metrikas
+        "1": {  // metrikas ID (atbilst metrics.json item id)
+            "t": 1565155052, // mērījuma laiks
+            "v": 21.8 // mērījuma vērtība
+        }
+    },
+    "name": "Sensor 1", // sensora nosaukums   
+    "type": 1,  // sensora tips (atbilst sensorTypes.json)
+    "variant": 8 // sensora variants ( atbilst sensorTypes.json)
+},
+
+    Metriku dati metrics.json
+{
+   "data":{
+      "lang":"en",
+      "currentItemCount":1,
+      "items":[ // metriku saraksts
+         {
+            "id":"1", // metrikas ID
+            "name":"Temperature", // metrikas nosaukums
+            "units":[ // metrikas mērvienības
+               {
+                  "id":"1", // mērvienības ID
+                  "name":"°C", // mērvienības nosaukums
+                  "precision":2,
+                  "selected":true // aktīvā mērvienība
+               },
+               {
+                  "id":"101",
+                  "name":"°F",
+                  "precision":2
+               },
+               {
+                  "id":"102",
+                  "name":"K",
+                  "precision":2
+               }
+            ]
+         }
+      ]
+   }
+}
+
+    Sensoru apraksta dati sensorTypes.json
+{
+   "1":{ // sensora tips
+      "8":{ // sensora variants
+         "name":"T/RH Sensor" // sensora tipa nosaukums
+      }
+    }
+}

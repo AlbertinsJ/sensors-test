@@ -1,0 +1,21 @@
+{
+	"name": "sensors-test",
+	"version": "1.1.1",
+	"description": "",
+	"author": "Janis Albertins",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AlbertinsJ/sensors-test"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"cssnano": "latest",
+		"autoprefixer": "^9.8.6",
+		"gulp-sass": "latest",
+		"gulp-postcss": "latest",
+		"gulp-sourcemaps": "latest",
+		"gulp-minify": "latest",
+		"gulp-webserver": "0.9.1"
+	}
+}
