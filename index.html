@@ -7,10 +7,11 @@
 	</head>
 	<body>
 		<div id="app">
+			<input type="text" placeholder="Filter by Sensor name or Variant" v-model="filter" />
 			<table>
 				<thead class="head">
 					<tr>
-						<th class="name">Sensor</th>
+						<th class="name">Sensor<span class="sorter sorter--asc"></span></th>
 					</tr>
 				</thead>
 				<tbody class="body">
@@ -19,7 +20,6 @@
 					</tr>
 				</tbody>
 			</table>
-			<input type="text" placeholder="Filter by department or employee" v-model="filter" />
 		</div>
 
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
