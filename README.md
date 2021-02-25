@@ -6,3 +6,4 @@ Sensors &amp; metrics data table
 3. In /gulp/ directory open command line, and run:
  - npm i
  - gulp
+4. Gulp will start local server at http://localhost:8000/ 
